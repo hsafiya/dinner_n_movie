@@ -30,9 +30,5 @@ fetch("https://....&q=" + movieGenre......)
     recipeContainer.appendChild(recipeData);
 })
 
-// fetch food data
-fetch("https://....&q=" + foodGenre ......);
-}
-
 // add event listener to search button, then fetch data for movie and recipe and add selected data to webpage
 fetchButton.addEventListener("click", movieAndRecipeGenerator);
