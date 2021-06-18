@@ -30,5 +30,27 @@ fetch("https://....&q=" + movieGenre......)
     recipeContainer.appendChild(recipeData);
 })
 
+// function getsource(id){
+//     $.ajax({
+//         url: "https://api.spoonacular.com/recipes/"+id+"/information?apiKey=45d6a42a7bd9410a991b8738069e8917",
+//         success: function(res) {
+//             document.getElementById('sourceLink').innerHTML=res.sourceUrl
+//             document.getElementById('sourceLink').href=res.sourceUrl
+//         }
+
+//     });
+// };
+
+// function getrecipe(q){
+//     $.ajax({
+//         url: "https://api.spoonacular.com/recipes/search?apiKey=45d6a42a7bd9410a991b8738069e8917&number=1&cuisine=&query="+q,
+//         success: function(res){
+//             document.getElementById("output").innerHTML="<h1>"+res.results[0].title+"</h1></br><img src='"+res.baseUri+res.results[0].image+"'width='400'/><br>Ready in "+res.results[0].readyInMinutes+" minutes"
+//             getsource(res.results[0].id)
+//             console.log(q)
+//         }
+//     })
+// }
+
 // add event listener to search button, then fetch data for movie and recipe and add selected data to webpage
 fetchButton.addEventListener("click", movieAndRecipeGenerator);
