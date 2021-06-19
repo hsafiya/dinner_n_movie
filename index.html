@@ -18,7 +18,7 @@
 <body>
     <!--header-->
     <div class="navbar">
-        <h1>Dinner-N-Movie</h1>
+        <h1 class="popout">Dinner-N-Movie</h1>
     </div>
 
     <div class="columns block level ">
@@ -37,7 +37,7 @@
                         <!--Food item search box-->
                         <div class="field has-addons">
                             <div class="control is-expanded has-icons-left">
-                                <input class="input is-fullwidth" type="text" placeholder="Search by Ingredient">
+                                <input class="input is-fullwidth" type="text" placeholder="Search by Ingredient" id="recipe-input">
                                 <!--icon for food item-->
                                 <span class="icon is-small is-left">
                                     <i class="fas fa-utensils"></i>
@@ -47,7 +47,7 @@
                         <!--Movie item search box-->
                         <div class="field has-addons">
                             <div class="control is-expanded has-icons-left">
-                                <input class="input is-fullwidth" type="text" placeholder="Search by Movie genre">
+                                <input class="input is-fullwidth" type="text" placeholder="Search by Movie genre" id="movie-input">
                                 <!--icon for movie item-->
                                 <span class="icon is-small is-left">
                                     <i class="fas fa-film"></i>
@@ -55,7 +55,7 @@
                             </div>    
                         </div>
                         <div class="control">
-                            <button type="submit" class="button is-primary" id="search-btn">Search</button>
+                            <button type="submit" class="button is-primary button is-danger is-light" id="search-btn">Search</button>
                         </div>
                     </div>
                 </div>
@@ -63,10 +63,10 @@
 
         </div>
         <!-- right container -->
-        <div class="column is-half">
+        <div class="column is-half ">
             <!-- recipe results -->
-            <div class="block box">
-                <h3 class="title is-3">Title 3</h3>
+            <div class="block box" id="recipe-container">
+                <h3 class="title is-3">Recipe</h3>
                 <button class="button is-medium is-fullwidth">Medium</button>
                 <button class="button is-medium is-fullwidth">Medium</button>
                 <button class="button is-medium is-fullwidth">Medium</button>
@@ -76,8 +76,8 @@
              
             </div>
             <!-- movie results -->
-            <div class="block box">
-                <h3 class="title is-3">Title 3</h3>
+            <div class="block box" id="movie-container">
+                <h3 class="title is-3">Movie </h3>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa maiores, corporis nemo dolores nisi dolore. Voluptatibus, nesciunt cumque. Eum dolor, aliquam cupiditate nulla voluptate cumque aliquid fugiat doloremque ipsam. Recusandae.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates vitae omnis beatae, impedit maxime labore incidunt officiis odio voluptatem illo perspiciatis accusantium. Accusamus a atque rerum cum quos omnis illo.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates vitae omnis beatae, impedit maxime labore incidunt officiis odio voluptatem illo perspiciatis accusantium. Accusamus a atque rerum cum quos omnis illo.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates vitae omnis beatae, impedit maxime labore incidunt officiis odio voluptatem illo perspiciatis accusantium. Accusamus a atque rerum cum quos omnis illo.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates vitae omnis beatae, impedit maxime labore incidunt officiis odio voluptatem illo perspiciatis accusantium. Accusamus a atque rerum cum quos omnis illo.</div>
         </div>
     </div>
@@ -90,6 +90,7 @@
     <section class="food">Food selection will be displayed here</section>
     <!--movie selection will be displayed here-->
     <section class="movie">Movie selection will be displayed here</section>
+    <script src="./assets/script.js"></script>
 </body>
 
 </html>
