@@ -8,6 +8,8 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" 
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
 
     <title>Dinner-N-Movie</title>
 </head>
@@ -32,38 +34,29 @@
                     </div>
 
                     <div class="content">
+                        <!--Food item search box-->
                         <div class="field has-addons">
-                            <div class="control is-expanded">
-                                <div class="select is-fullwidth">
-                                    <select name="foodtype">
-                                        <option value="american">American</option>
-                                        <option value="chinese">Chinese</option>
-                                        <option value="italian">Italian</option>
-                                        <option value="mexican">Mexican</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="control">
-                                <button type="submit" class="button is-primary">Choose</button>
-                            </div>
+                            <div class="control is-expanded has-icons-left">
+                                <input class="input is-fullwidth" type="text" placeholder="Search by Ingredient">
+                                <!--icon for food item-->
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-utensils"></i>
+                                </span>
+                            </div>                            
                         </div>
+                        <!--Movie item search box-->
                         <div class="field has-addons">
-                            <div class="control is-expanded">
-                                <div class="select is-fullwidth">
-                                    <select name="foodtype">
-                                        <option value="comedy">Comedy</option>
-                                        <option value="action">Action</option>
-                                        <option value="horror">Horror</option>
-                                        <option value="romance">Romance</option>
-                                        <option value="sciencefiction">Science fiction</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="control">
-                                <button type="submit" class="button is-primary">Choose</button>
-                            </div>
+                            <div class="control is-expanded has-icons-left">
+                                <input class="input is-fullwidth" type="text" placeholder="Search by Movie genre">
+                                <!--icon for movie item-->
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-film"></i>
+                                </span>
+                            </div>    
                         </div>
-
+                        <div class="control">
+                            <button type="submit" class="button is-primary" id="search-btn">Search</button>
+                        </div>
                     </div>
                 </div>
             </div>
