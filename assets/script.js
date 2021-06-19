@@ -11,7 +11,7 @@ var movieInput = document.querySelector("#movie-input");
 var url = "https://api.edamam.com/search?"
 
 // api key 
-var apiKey = "&app_key=58017978fb4a01d511c9042d6a7ec02"
+var apiKey = "&app_key=58017978fb4a01d511c9042d6a7ec020"
 
 // api id 
 var apiId = "app_id=4689c1af"
@@ -31,7 +31,7 @@ var fetchLogic = function() {
         return response.json()
     })
     .then(function(data) {
-        document.querySelector("#recipe-container").innerHTML = `<div class="card col-3 offset-1" style="width: 30rem;">
+        document.querySelector("#recipe-container").innerHTML = `<div class="card col-3 offset-1" style="width: 20rem;">
         <img src="${data.hits[0].recipe.image}" class="card-img-top" alt="food">
         <div class="card-body">
           <h4 class="card-title"> <strong>${data.hits[0].recipe.label}</strong></h4>
