@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/style.css">
 
     <title>Dinner-N-Movie</title>
@@ -14,35 +15,88 @@
 
 <body>
     <!--header-->
-    <header>
-        <h1 class="title">Dinner-N-Movie</h1>
-    </header>
+    <div class="navbar">
+        <h1>Dinner-N-Movie</h1>
+    </div>
 
+    <div class="columns block level ">
+        <!-- left container w dropdown -->
+        <div class="column is-half ">
+            <div class="card">
+
+                <div class="card-content">
+                    <div class="card-header-title is-centered">
+
+                        Find Movie and recipe
+
+                    </div>
+
+                    <div class="content">
+                        <div class="field has-addons">
+                            <div class="control is-expanded">
+                                <div class="select is-fullwidth">
+                                    <select name="foodtype">
+                                        <option value="american">American</option>
+                                        <option value="chinese">Chinese</option>
+                                        <option value="italian">Italian</option>
+                                        <option value="mexican">Mexican</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <button type="submit" class="button is-primary">Choose</button>
+                            </div>
+                        </div>
+                        <div class="field has-addons">
+                            <div class="control is-expanded">
+                                <div class="select is-fullwidth">
+                                    <select name="foodtype">
+                                        <option value="comedy">Comedy</option>
+                                        <option value="action">Action</option>
+                                        <option value="horror">Horror</option>
+                                        <option value="romance">Romance</option>
+                                        <option value="sciencefiction">Science fiction</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <button type="submit" class="button is-primary">Choose</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- right container -->
+        <div class="column is-half">
+            <!-- recipe results -->
+            <div class="block box">
+                <h3 class="title is-3">Title 3</h3>
+                <button class="button is-medium is-fullwidth">Medium</button>
+                <button class="button is-medium is-fullwidth">Medium</button>
+                <button class="button is-medium is-fullwidth">Medium</button>
+                <button class="button is-medium is-fullwidth">Medium</button>
+                <button class="button is-medium is-fullwidth">Medium</button>
+               
+             
+            </div>
+            <!-- movie results -->
+            <div class="block box">
+                <h3 class="title is-3">Title 3</h3>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa maiores, corporis nemo dolores nisi dolore. Voluptatibus, nesciunt cumque. Eum dolor, aliquam cupiditate nulla voluptate cumque aliquid fugiat doloremque ipsam. Recusandae.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates vitae omnis beatae, impedit maxime labore incidunt officiis odio voluptatem illo perspiciatis accusantium. Accusamus a atque rerum cum quos omnis illo.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates vitae omnis beatae, impedit maxime labore incidunt officiis odio voluptatem illo perspiciatis accusantium. Accusamus a atque rerum cum quos omnis illo.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates vitae omnis beatae, impedit maxime labore incidunt officiis odio voluptatem illo perspiciatis accusantium. Accusamus a atque rerum cum quos omnis illo.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates vitae omnis beatae, impedit maxime labore incidunt officiis odio voluptatem illo perspiciatis accusantium. Accusamus a atque rerum cum quos omnis illo.</div>
+        </div>
+    </div>
     <!--Dinner and movie selection-->
     <section class="dinnermovie">
-        <div>
-        <h2>Type of Cuisine</h2>
-        <select class="fdropdown">
-            <option value="american">American</option>
-            <option value="chinese">Chinese</option>
-            <option value="italian">Italian</option>
-            <option value="mexican">Mexican</option>
-        </select>
-        </div>
-        <div>
-        <h2>Movie Genre</h2>
-        <select class="mdropdown">
-            <option value="comedy">Comedy</option>
-            <option value="action">Action</option>
-            <option value="horror">Horror</option>
-            <option value="romance">Romance</option>
-            <option value="sciencefiction">Science fiction</option>
-        </select>
-        <button class="">Ready</button>
+
+
     </section>
     <!--food selection will be displayed here-->
     <section class="food">Food selection will be displayed here</section>
     <!--movie selection will be displayed here-->
     <section class="movie">Movie selection will be displayed here</section>
 </body>
+
 </html>
