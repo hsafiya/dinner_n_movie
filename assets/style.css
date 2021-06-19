@@ -2,15 +2,23 @@
     background-image: url(./img/1365.jpg);
     height: 230px;
     background-position: 20%;
+    border-bottom:solid 15px darkgoldenrod;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  
     
 }
 
 body {
-background-image: url(./img/jg6b9ebs8v9gkugqcbq5lmzna6io8ay2qvmhvgblbpzhhzi8z4bakx6fm7vocu3o-.jpg);
+background-image: url(./img/Romantic-Dinner-Ideas-To-Combine-With-White-Wine.jpg);
 background-position: 100%;
+background-attachment: scroll;
+background-size: 100%;
 }
 .box{
     background-color: bisque;
+    opacity: 0.8;
+    color:crimson;
 }
 
 h1 {
