@@ -1,0 +1,33 @@
+.navbar {
+    background-image: url(./img/1365.jpg);
+    height: 230px;
+    background-position: 20%;
+    
+}
+
+body {
+background-image: url(./img/jg6b9ebs8v9gkugqcbq5lmzna6io8ay2qvmhvgblbpzhhzi8z4bakx6fm7vocu3o-.jpg);
+background-position: 100%;
+}
+.box{
+    background-color: bisque;
+}
+
+h1 {
+    animation: popout 5s ease;
+    -webkit-animation: popout 1s ease;
+    font-size: 120px;
+    color: azure;
+    margin: auto;
+   
+}
+@keyframes popout {
+    from{transform:scale(0)}
+    80%{transform:scale(1.2)}
+    to{transform:scale(1)}
+}
+@-webkit-keyframes popout {
+    from{-webkit-transform:scale(0)}
+    80%{-webkit-transform:scale(1.2)}
+    to{-webkit-transform:scale(1)}
+}
