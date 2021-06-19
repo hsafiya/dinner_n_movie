@@ -1,4 +1,5 @@
 .navbar {
+
     background-image: url(./img/1365.jpg);
     height: 230px;
     background-position: 20%;
@@ -19,23 +20,29 @@ background-size: 100%;
     background-color: bisque;
     opacity: 0.8;
     color:crimson;
-}
+
 
 h1 {
-    animation: popout 5s ease;
-    -webkit-animation: popout 1s ease;
-    font-size: 120px;
-    color: azure;
-    margin: auto;
-   
+  animation: popout 5s ease;
+  -webkit-animation: popout 1s ease;
+  font-size: 120px;
+  color: azure;
+  margin: auto;
 }
 @keyframes popout {
-    from{transform:scale(0)}
-    80%{transform:scale(1.2)}
-    to{transform:scale(1)}
+  from {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 @-webkit-keyframes popout {
+
     from{-webkit-transform:scale(0)}
     80%{-webkit-transform:scale(1.2)}
     to{-webkit-transform:scale(1)}
-}
+
