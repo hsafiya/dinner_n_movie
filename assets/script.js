@@ -7,14 +7,23 @@ var recipeInput = document.querySelector("#recipe-input");
 // identify movie input
 var movieInput = document.querySelector("#movie-input");
 
-// url 
-var url = "https://api.edamam.com/search?"
+// recipe url 
+var recipeUrl = "https://api.edamam.com/search?"
 
-// api key 
-var apiKey = "&app_key=58017978fb4a01d511c9042d6a7ec020"
+// recipe api key 
+var recipeApiKey = "&app_key=58017978fb4a01d511c9042d6a7ec020"
 
-// api id 
-var apiId = "app_id=4689c1af"
+// recipe api id 
+var recipeApiId = "app_id=4689c1af"
+
+// movie url
+var movieUrl = "https://api.themoviedb.org/3/movie/550?" 
+
+var MOVIE_DB_API = 'api_key=cd59a3a7f869d026c281fb812755e81b';
+var MOVIE_DB_ENDPOINT = 'https://api.themoviedb.org';
+var MOVIE_DB_IMAGE_ENDPOINT = 'https://image.tmdb.org/t/p/w500';
+var DEFAULT_POST_IMAGE = 'https://via.placeholder.com/150';
+
 
 // create function that will handle fetch
 var fetchLogic = function() {
@@ -25,7 +34,7 @@ var fetchLogic = function() {
 
     
     fetch(
-        url + apiId + apiKey + "&q=" + searchedRecipe 
+        recipeUrl + recipeApiId + recipeApiKey + "&q=" + searchedRecipe 
     )
     .then(function(response) {
         return response.json()
@@ -44,18 +53,27 @@ var fetchLogic = function() {
         
     })
 
-    /* store user's movie input in variable
+    // store user's movie input in variable
     searchedMovie = movieInput.value.trim();
     
     fetch(
-        "https://" + searchedMovie
+        movieUrl + MOVIE_DB_API + "&q=" + searchedMovie
     )
     .then(function(response) {
         return response.json()
     })
     .then(function(data) {
+       
+        var movieTitle = data.original_title
+        console.log(movieTitle)
+        document.querySelector("#movie-title").innerHTML = movieTitle
         
-    }) */
+        var movieDescription = data.overview
+        console.log(movieDescription)
+        document.querySelector("#movie-description").innerHTML = movieDescription
+        
+        
+    }) 
 
 
 };
