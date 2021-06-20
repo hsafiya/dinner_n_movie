@@ -1,34 +1,35 @@
-.navbar {
-
-    background-image: url(./img/1365.jpg);
-    height: 230px;
-    background-position: 20%;
-    border-bottom:solid 15px darkgoldenrod;
-    background-repeat: no-repeat;
-    background-size: 100%;
-  
-    
-}
-
 body {
-background-image: url(./img/Romantic-Dinner-Ideas-To-Combine-With-White-Wine.jpg);
-background-position: 100%;
-background-attachment: scroll;
-background-size: 100%;
+  background-image: url(./img/Romantic-Dinner-Ideas-To-Combine-With-White-Wine.jpg);
+  background-position: 100%;
+  background-attachment: scroll;
+  background-size: 100%;
 }
-.box{
-    background-color: bisque;
-    opacity: 0.8;
-    color:crimson;
+.navbar {
+  background-image: url(./img/1365.jpg);
+  height: 230px;
+  background-position: 20%;
+  border-bottom: solid 15px darkgoldenrod;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.box {
+  background-color: bisque;
+  opacity: 0.8;
+  color: crimson;
+}
 
-
-h1 {
+header h1 {
   animation: popout 5s ease;
   -webkit-animation: popout 1s ease;
   font-size: 120px;
   color: azure;
   margin: auto;
 }
+
+a {
+  color: inherit;
+}
+
 @keyframes popout {
   from {
     transform: scale(0);
@@ -41,8 +42,13 @@ h1 {
   }
 }
 @-webkit-keyframes popout {
-
-    from{-webkit-transform:scale(0)}
-    80%{-webkit-transform:scale(1.2)}
-    to{-webkit-transform:scale(1)}
-
+  from {
+    -webkit-transform: scale(0);
+  }
+  80% {
+    -webkit-transform: scale(1.2);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
