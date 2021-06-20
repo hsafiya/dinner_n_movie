@@ -40,14 +40,14 @@ var fetchLogic = function() {
         return response.json()
     })
     .then(function(data) {
-        document.querySelector("#recipe-container").innerHTML = `<div class="card col-3 offset-1" style="width: 20rem;">
+        document.querySelector("#recipe-container").innerHTML = `<div class="card col-3 offset-1" >
         <img src="${data.hits[0].recipe.image}" class="card-img-top" alt="food">
         <div class="card-body">
           <h4 class="card-title"> <strong>${data.hits[0].recipe.label}</strong></h4>
           <p class="card-text">Recipe Source: ${data.hits[0].recipe.source}</p>
           <p class="card-text">Calories: ${Math.floor(data.hits[0].recipe.calories)}</p>
           <p class="card-text">Serving size: ${data.hits[0].recipe.yield}</p>
-          <button class="btn btn-primary"> <a href="${data.hits[0].recipe.url}" target="_blank" </a>Get Recipe</button>
+          <button type="submit" class="button is-primary button is-danger is-light"> <a href="${data.hits[0].recipe.url}" target="_blank" </a>Get Recipe</button>
         </div>
       </div>`
         
@@ -67,7 +67,7 @@ var fetchLogic = function() {
 
         console.log(data);
        
-         var movieTitle = data.results[0].original_title
+        var movieTitle = data.results[0].original_title
         console.log(movieTitle)
         document.querySelector("#movie-title").innerHTML = movieTitle
         

@@ -5,20 +5,17 @@ body {
   background-size: 100%;
 }
 .navbar {
-
-    background-image: url(./img/1365.jpg);
-    height: 230px;
-    background-position: 20%;
-    border-bottom:solid 15px darkgoldenrod;
-    background-repeat: no-repeat;
-    background-size: 100%;
-  
-    
+  background-image: url(./img/1365.jpg);
+  height: 230px;
+  background-position: 20%;
+  border-bottom: solid 15px darkgoldenrod;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
-.box{
-    background-color: bisque;
-    opacity: 0.8;
-    color:crimson;
+.box {
+  background-color: bisque;
+  opacity: 0.8;
+  color: crimson;
 }
 
 header h1 {
@@ -28,6 +25,11 @@ header h1 {
   color: azure;
   margin: auto;
 }
+
+a {
+  color: inherit;
+}
+
 @keyframes popout {
   from {
     transform: scale(0);
@@ -40,8 +42,13 @@ header h1 {
   }
 }
 @-webkit-keyframes popout {
-
-    from{-webkit-transform:scale(0)}
-    80%{-webkit-transform:scale(1.2)}
-    to{-webkit-transform:scale(1)}
+  from {
+    -webkit-transform: scale(0);
+  }
+  80% {
+    -webkit-transform: scale(1.2);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
 }
