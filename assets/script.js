@@ -17,7 +17,7 @@ var recipeApiKey = "&app_key=58017978fb4a01d511c9042d6a7ec020"
 var recipeApiId = "app_id=4689c1af"
 
 // movie url
-var movieUrl = "https://api.themoviedb.org/3/movie/550?" 
+var movieUrl = "https://api.themoviedb.org/3/search/movie?" 
 
 var MOVIE_DB_API = 'api_key=cd59a3a7f869d026c281fb812755e81b';
 var MOVIE_DB_ENDPOINT = 'https://api.themoviedb.org';
@@ -55,25 +55,30 @@ var fetchLogic = function() {
 
     // store user's movie input in variable
     searchedMovie = movieInput.value.trim();
+    console.log(searchedMovie);
     
     fetch(
-        movieUrl + MOVIE_DB_API + "&q=" + searchedMovie
+        movieUrl + MOVIE_DB_API + "&query=" + searchedMovie
     )
     .then(function(response) {
         return response.json()
     })
     .then(function(data) {
+
+        console.log(data);
        
-        var movieTitle = data.original_title
+         var movieTitle = data.results[0].original_title
         console.log(movieTitle)
         document.querySelector("#movie-title").innerHTML = movieTitle
         
-        var movieDescription = data.overview
+        var movieDescription = data.results[0].overview
         console.log(movieDescription)
-        document.querySelector("#movie-description").innerHTML = movieDescription
+        document.querySelector("#movie-description").innerHTML = movieDescription 
         
         
     }) 
+
+    
 
 
 };
