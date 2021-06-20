@@ -1,3 +1,9 @@
+body {
+  background-image: url(./img/Romantic-Dinner-Ideas-To-Combine-With-White-Wine.jpg);
+  background-position: 100%;
+  background-attachment: scroll;
+  background-size: 100%;
+}
 .navbar {
 
     background-image: url(./img/1365.jpg);
@@ -9,20 +15,13 @@
   
     
 }
-
-body {
-background-image: url(./img/Romantic-Dinner-Ideas-To-Combine-With-White-Wine.jpg);
-background-position: 100%;
-background-attachment: scroll;
-background-size: 100%;
-}
 .box{
     background-color: bisque;
     opacity: 0.8;
     color:crimson;
+}
 
-
-h1 {
+header h1 {
   animation: popout 5s ease;
   -webkit-animation: popout 1s ease;
   font-size: 120px;
@@ -45,4 +44,4 @@ h1 {
     from{-webkit-transform:scale(0)}
     80%{-webkit-transform:scale(1.2)}
     to{-webkit-transform:scale(1)}
-
+}
