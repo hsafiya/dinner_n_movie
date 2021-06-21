@@ -40,14 +40,21 @@ var fetchLogic = function() {
         return response.json()
     })
     .then(function(data) {
+        
+        // store length of recipe results in variable
+        var numberOfRecipes = data.hits.length;
+
+        // generate a random number to use in selection of data
+        var randomNum = Math.floor(Math.random() * numberOfRecipes);
+
         document.querySelector("#recipe-container").innerHTML = `<div class="card col-3 offset-1" >
-        <img src="${data.hits[0].recipe.image}" class="card-img-top" alt="food">
+        <img src="${data.hits[randomNum].recipe.image}" class="card-img-top" alt="food">
         <div class="card-body">
-          <h4 class="card-title"> <strong>${data.hits[0].recipe.label}</strong></h4>
-          <p class="card-text">Recipe Source: ${data.hits[0].recipe.source}</p>
-          <p class="card-text">Calories: ${Math.floor(data.hits[0].recipe.calories)}</p>
-          <p class="card-text">Serving size: ${data.hits[0].recipe.yield}</p>
-          <button type="submit" class="button is-primary button is-danger is-light"> <a href="${data.hits[0].recipe.url}" target="_blank" </a>Get Recipe</button>
+          <h4 class="card-title"> <strong>${data.hits[randomNum].recipe.label}</strong></h4>
+          <p class="card-text">Recipe Source: ${data.hits[randomNum].recipe.source}</p>
+          <p class="card-text">Calories: ${Math.floor(data.hits[randomNum].recipe.calories)}</p>
+          <p class="card-text">Serving size: ${data.hits[randomNum].recipe.yield}</p>
+          <button type="submit" class="button is-primary button is-danger is-light"> <a href="${data.hits[randomNum].recipe.url}" target="_blank" </a>Get Recipe</button>
         </div>
       </div>`
         
@@ -55,7 +62,6 @@ var fetchLogic = function() {
 
     // store user's movie input in variable
     searchedMovie = movieInput.value.trim();
-    console.log(searchedMovie);
     
     fetch(
         movieUrl + MOVIE_DB_API + "&query=" + searchedMovie
@@ -65,15 +71,20 @@ var fetchLogic = function() {
     })
     .then(function(data) {
 
-        console.log(data);
+        var numberOfMovies = data.results.length;
+
+        var randomNumTwo = Math.floor(Math.random() * numberOfMovies);
        
-        var movieTitle = data.results[0].original_title
-        console.log(movieTitle)
+        var movieTitle = data.results[randomNumTwo].original_title
         document.querySelector("#movie-title").innerHTML = movieTitle
         
-        var movieDescription = data.results[0].overview
-        console.log(movieDescription)
+        var movieDescription = data.results[randomNumTwo].overview
         document.querySelector("#movie-description").innerHTML = movieDescription 
+
+        var moviePoster = data.results[randomNumTwo].poster_path;
+        document.querySelector("#poster-container").innerHTML = '<img src="https://image.tmdb.org/t/p/w185' + moviePoster + '" />'; 
+        console.log(moviePoster);
+
         
         
     }) 
