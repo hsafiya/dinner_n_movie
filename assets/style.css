@@ -30,6 +30,9 @@ a {
   color: inherit;
 }
 
+footer {
+  background-image: url(./img/1365.jpg);
+}
 @keyframes popout {
   from {
     transform: scale(0);
