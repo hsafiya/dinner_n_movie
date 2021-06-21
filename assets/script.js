@@ -70,35 +70,21 @@ var fetchLogic = function() {
         
         var movieDescription = data.overview
         console.log(movieDescription)
-        document.querySelector("#movie-description").innerHTML = movieDescription
+        document.querySelector("#movie-description").innerHTML = movieDescription 
+
         
         
     }) 
-
+    var moviePoster = data.results[0].poster_path
+    console.log(moviePoster)
+    document.querySelector("#movie-description").innerHTML = moviePoster 
+    var moviePoster = data.results[0].poster_path
+        console.log(moviePoster)
+        document.querySelector("#movie-description").innerHTML = moviePoster 
+        
 
 };
 
 
 searchBtn.addEventListener("click", fetchLogic);
 
-// function getsource(id){
-//     $.ajax({
-//         url: "https://api.spoonacular.com/recipes/"+id+"/information?apiKey=45d6a42a7bd9410a991b8738069e8917",
-//         success: function(res) {
-//             document.getElementById('sourceLink').innerHTML=res.sourceUrl
-//             document.getElementById('sourceLink').href=res.sourceUrl
-//         }
-
-//     });
-// };
-
-// function getrecipe(q){
-//     $.ajax({
-//         url: "https://api.spoonacular.com/recipes/search?apiKey=45d6a42a7bd9410a991b8738069e8917&number=1&cuisine=&query="+q,
-//         success: function(res){
-//             document.getElementById("output").innerHTML="<h1>"+res.results[0].title+"</h1></br><img src='"+res.baseUri+res.results[0].image+"'width='400'/><br>Ready in "+res.results[0].readyInMinutes+" minutes"
-//             getsource(res.results[0].id)
-//             console.log(q)
-//         }
-//     })
-// }
