@@ -117,13 +117,6 @@ See the [open issues](https://github.com/hsafiya/dinner_n_movie/issues) for a li
 
 
 
-<!-- LICENSE -->
-## License
-
-Distributed the privacy ac
-
-
-
 <!-- CONTACT -->
 ## Contact
 
@@ -141,6 +134,7 @@ Project Link: [Dinner & Movie App]https://hsafiya.github.io/dinner_n_movie/)
 * [Edamam Recipe API](https://developer.edamam.com/edamam-recipe-api)
 * [The Movie Database](https://developers.themoviedb.org/3/getting-started/introduction)
 * [Bulma](https://bulma.io/)
+* [Fontawesome](https://fontawesome.com/)
 * [GitHub Pages](https://pages.github.com)
 * [Spoonacular](https://spoonacular.com/)
 * [Stack Overflow](https://stackoverflow.com/)
