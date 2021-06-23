@@ -78,18 +78,17 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Dinner & Movie][product-screenshot]](https://github.com/hsafiya/dinner_n_movie/blob/develop/assets/img/dinner_n_movie_.png)
 
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+* Description: 
+Whether it is love, business or just "a thing" Dinner_n_Movie has you covered with incredible themed dinner ideas offers you  the perfect excuse to spend even more time at home. Not done social distancing? Allow Dinner_n_Movie the chance to provide something tasty to eat and fun to watch. Enjoy the large collection recipes carefully crafted to compliment the many movie offerings any fan will appreciate. Enjoy themed meals from around the world in the company of friends or loved ones. 
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
+* Motivation for development: 
+Dinner-n-Movie is an app intended to make date night easier. Check in to find great recipes for your favorite dishes. And grab movie suggestions for you next “Netflix and chill” session.
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have have contributed to expanding this template!
+* User story: 
+As a user I would like to to find simple recipes and movie suggestions for a date night.  When I make a selection for one option, I am given a choice if I want the other option. I want easy to make recipes and well known movies to watch.  I am also given either option (movie or recipe) at random if I don’t make specific choices.
 
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
 
 ### Built With
 
