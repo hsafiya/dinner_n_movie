@@ -27,23 +27,21 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="">
+    <img src="" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">Dinner & Movie</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    The app that answers, "What's for dinner?" 
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+        <br />
+    <a href="https://hsafiya.github.io/dinner_n_movie/">View Demo</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://github.com/hsafiya/dinner_n_movie/issues">Report Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/hsafiya/dinner_n_movie/pulls">Request Feature</a>
   </p>
 </p>
 
@@ -95,39 +93,36 @@ A list of commonly used resources that I find helpful are listed in the acknowle
 
 ### Built With
 
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+The project is an example of how you can build anything with Vanilla JavaScript with very little assistance from major frameworks.  We attempted to use only what was necessary to build a responsive project. 
+
+
+* [JavaScript](https://jquery.com)
 * [Laravel](https://laravel.com)
+* [Bulma](https://bulma.io/)
 
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Feel free to enjoy coding along with us on this app.  To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+There no prerequisites for installing this app.
+
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
+1. Get a free API Key at [Edamam](https://developer.edamam.com/edamam-recipe-api)
+and [The Movie Database](https://developers.themoviedb.org/3/getting-started/introduction)
 2. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/hsafiya/dinner_n_movie
    ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
+3. Fortunately, this app does not require any packages such as NPM packages
+  
+4. Enter your API in `script.js`
    ```JS
    const API_KEY = 'ENTER YOUR API';
    ```
