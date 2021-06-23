@@ -67,7 +67,21 @@ var fetchLogic = function() {
       </div>`
         
     })
-    .catch(error => alert("Please enter valid recipe search term"));
+    .catch(error => 
+        
+        document.querySelector("#message-container").innerHTML = "<article class='message is-warning'><div class='message-header'><p id='warning-header'>Attention!</p><button class='delete' aria-label='delete'></button></div><div class='message-body' id='warning-message'>Please enter a valid recipe search term</div></article>"
+    
+    );
+
+    /*<article class="message is-warning">
+    <div class="message-header">
+    <p id="warning-header"></p>
+    <button class="delete" aria-label="delete"></button>
+    </div>
+    <div class="message-body" id="warning-message">
+    
+    </div>
+</article> */
 
     // store user's movie input in variable
     searchedMovie = movieInput.value.trim();
@@ -99,7 +113,11 @@ var fetchLogic = function() {
         
         
     })
-    .catch(error => alert("Please enter a valid movie search term"));
+    .catch(error => 
+        
+        document.querySelector("#message-container").innerHTML = "<article class='message is-warning'><div class='message-header'><p id='warning-header'>Attention!</p></div><div class='message-body' id='warning-message'>Please enter a valid movie search term</div></article>"
+    
+    );
 
 
     
@@ -109,6 +127,8 @@ var fetchLogic = function() {
     // empty out input fields
     recipeInput.value = " ";
     movieInput.value = " ";
+
+    document.querySelector("#message-container").innerHTML = "";
 
 
 };
