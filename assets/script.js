@@ -47,7 +47,7 @@ var fetchLogic = function() {
         // generate a random number to use in selection of data
         var randomNum = Math.floor(Math.random() * numberOfRecipes);
 
-        document.querySelector("#recipe-container").innerHTML = `<div class="card col-3 offset-1" >
+        document.querySelector("#recipe-container").innerHTML = `<div class="card-background-transparent col-3 offset-1" >
         <img src="${data.hits[randomNum].recipe.image}" class="card-img-top" alt="food">
         <div class="card-body">
           <h4 class="card-title"> <strong>${data.hits[randomNum].recipe.label}</strong></h4>
