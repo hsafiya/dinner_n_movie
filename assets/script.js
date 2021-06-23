@@ -24,15 +24,22 @@ var MOVIE_DB_ENDPOINT = 'https://api.themoviedb.org';
 var MOVIE_DB_IMAGE_ENDPOINT = 'https://image.tmdb.org/t/p/w500';
 var DEFAULT_POST_IMAGE = 'https://via.placeholder.com/150';
 
+// create array to save recipe searches
+var recipeSearchArray = JSON.parse(localStorage.getItem("recipe-history"))||[];
+
+// create array to save movie searches
+var movieSearchArray = JSON.parse(localStorage.getItem("movie-history"))||[]; 
+
 
 // create function that will handle fetch
 var fetchLogic = function() {
     
     // store user's recipe input in variable
     searchedRecipe = recipeInput.value.trim();
-    
+    // push recipe value to recipe array 
+    recipeSearchArray.push(searchedRecipe);
 
-    
+
     fetch(
         recipeUrl + recipeApiId + recipeApiKey + "&q=" + searchedRecipe 
     )
@@ -60,9 +67,13 @@ var fetchLogic = function() {
       </div>`
         
     })
+    .catch(error => alert("Please enter valid recipe search term"));
 
     // store user's movie input in variable
     searchedMovie = movieInput.value.trim();
+    // push movie m=value to movie array 
+    movieSearchArray.push(searchedMovie);
+
     
     fetch(
         movieUrl + MOVIE_DB_API + "&query=" + searchedMovie
@@ -84,38 +95,47 @@ var fetchLogic = function() {
 
         var moviePoster = data.results[randomNumTwo].poster_path;
         document.querySelector("#poster-container").innerHTML = '<img src="https://image.tmdb.org/t/p/w185' + moviePoster + '" />'; 
-        console.log(moviePoster);
 
         
         
-    }) 
+    })
+    .catch(error => alert("Please enter a valid movie search term"));
+
 
     
+    // call renderSearches and pass in corresponding values
+    renderSearches(recipeSearchArray, movieSearchArray);
 
+    // empty out input fields
+    recipeInput.value = " ";
+    movieInput.value = " ";
+
+
+};
+
+
+var renderSearches = function(recipeArray, movieArray) {
+
+    localStorage.setItem("recipe-array", recipeArray);
+    
+
+    localStorage.setItem("movie-array", movieArray);
+
+
+    displaySavedData();
+
+};
+
+var displaySavedData = function() {
+
+    //console.log(localStorage.getItem("recipe-array"))
+    document.querySelector("#recipe-searches").innerHTML = "Recent recipe searches: " + localStorage.getItem("recipe-array");
+
+    //console.log(localStorage.getItem("movie-array"))
+    document.querySelector("#movie-searches").innerHTML = "Recent movie searches: " + localStorage.getItem("movie-array");
 
 };
 
 
 searchBtn.addEventListener("click", fetchLogic);
 
-// function getsource(id){
-//     $.ajax({
-//         url: "https://api.spoonacular.com/recipes/"+id+"/information?apiKey=45d6a42a7bd9410a991b8738069e8917",
-//         success: function(res) {
-//             document.getElementById('sourceLink').innerHTML=res.sourceUrl
-//             document.getElementById('sourceLink').href=res.sourceUrl
-//         }
-
-//     });
-// };
-
-// function getrecipe(q){
-//     $.ajax({
-//         url: "https://api.spoonacular.com/recipes/search?apiKey=45d6a42a7bd9410a991b8738069e8917&number=1&cuisine=&query="+q,
-//         success: function(res){
-//             document.getElementById("output").innerHTML="<h1>"+res.results[0].title+"</h1></br><img src='"+res.baseUri+res.results[0].image+"'width='400'/><br>Ready in "+res.results[0].readyInMinutes+" minutes"
-//             getsource(res.results[0].id)
-//             console.log(q)
-//         }
-//     })
-// }

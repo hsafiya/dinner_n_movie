@@ -117,7 +117,6 @@ See the [open issues](https://github.com/hsafiya/dinner_n_movie/issues) for a li
 
 
 
-
 <!-- CONTACT -->
 ## Contact
 
