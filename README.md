@@ -69,7 +69,7 @@ As a user I would like to to find simple recipes and movie suggestions for a dat
 The project is an example of how you can build anything with Vanilla JavaScript with very little assistance from major frameworks.  We attempted to use only what was necessary to build a responsive project. 
 
 
-* [JavaScript](https://jquery.com)
+* [JavaScript](https://javascript.info/)
 * [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
 * [HTML](https://html.spec.whatwg.org/)
 * [Bulma](https://bulma.io/)
@@ -120,7 +120,7 @@ See the [open issues](https://github.com/hsafiya/dinner_n_movie/issues) for a li
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed the privacy ac
 
 
 
