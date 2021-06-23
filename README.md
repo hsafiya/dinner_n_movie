@@ -1,28 +1,3 @@
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
 
 <!-- PROJECT LOGO -->
 <br />
@@ -77,7 +52,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Dinner & Movie][product-screenshot]](dinner_n_movie_.png)
+[![Dinner & Movie][product-screenshot]](https://github.com/hsafiya/dinner_n_movie/blob/README/assets/img/dinner_n_movie_.png)
 
 * Description: 
 Whether it is love, business or just "a thing" Dinner_n_Movie has you covered with incredible themed dinner ideas offers you  the perfect excuse to spend even more time at home. Not done social distancing? Allow Dinner_n_Movie the chance to provide something tasty to eat and fun to watch. Enjoy the large collection recipes carefully crafted to compliment the many movie offerings any fan will appreciate. Enjoy themed meals from around the world in the company of friends or loved ones. 
@@ -131,9 +106,7 @@ and [The Movie Database](https://developers.themoviedb.org/3/getting-started/int
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+This app is intended as a way to demostrate the complex nature of JavaScript and the connected frameworks that help to build the web.  Feel free to explore along with us and suggest any fixes as we build an that works for your personal needs. 
 
 
 
