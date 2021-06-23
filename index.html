@@ -1,114 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="./assets/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" 
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
-    <!--attribution to Edamam API-->
-    <script src="https://developer.edamam.com/attribution/badge.js"></script>
-    <title>Dinner-N-Movie</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+        <link rel="stylesheet" href="./assets/style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" 
+            integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+        <!--attribution to Edamam API-->
+        <script src="https://developer.edamam.com/attribution/badge.js"></script>
+        <title>Dinner-N-Movie</title>
+    </head>
 
 
-<body>
-    <!--header-->
-    <header class="navbar">
-        <h1 class="popout">Dinner-N-Movie</h1>
-    </header>
+    <body>
+        <!--header block class adds space between header and section below-->
+        <header class="navbar block">
+            <h1 class="popout">Dinner-N-Movie</h1>
+        </header>
 
-    <div class="columns block level ">
-        <!-- left container w dropdown -->
-        <div class="column is-half ">
-            <div class="card box">
-
-                <div class="card-content color ">
-                    <div class="card-header-title is-centered">
-
-                        Find Movie and recipe
-
+        <!-- Top Container search recipe/movie section-->
+        <div class="columns  is-mobile is-centered block level">            
+            <div class="column">
+                <div class="card box">
+                    <div class="card-content color ">
+                        <!--search box title start-->
+                        <div class="card-header-title is-centered">
+                            Find Movie and recipe
+                        </div>
+                        <!--search box title end-->
+                        <div class="content color ">
+                            <!--Food item search box-->
+                            <div class="field has-addons">
+                                <div class="control is-expanded has-icons-left">
+                                    <input class="input is-fullwidth" type="text" placeholder="Search by Ingredient" id="recipe-input">
+                                    <!--icon for food item-->
+                                    <span class="icon is-small is-left">
+                                        <i class="fas fa-utensils"></i>
+                                    </span>
+                                </div>                            
+                            </div>
+                            <!--Movie item search box-->
+                            <div class="field has-addons color">
+                                <div class="control is-expanded has-icons-left">
+                                    <input class="input is-fullwidth" type="text" placeholder="Search by Movie genre" id="movie-input">
+                                    <!--icon for movie item-->
+                                    <span class="icon is-small is-left">
+                                        <i class="fas fa-film"></i>
+                                    </span>
+                                </div>    
+                            </div>
+                            <div class="control">
+                                <button type="submit" class="button is-primary button is-danger is-light" id="search-btn">Search</button>
+                            </div>
+                        </div>
                     </div>
+                </div>
 
-                    <div class="content color ">
-                        <!--Food item search box-->
-                        <div class="field has-addons">
-                            <div class="control is-expanded has-icons-left">
-                                <input class="input is-fullwidth" type="text" placeholder="Search by Ingredient" id="recipe-input">
-                                <!--icon for food item-->
-                                <span class="icon is-small is-left">
-                                    <i class="fas fa-utensils"></i>
-                                </span>
-                            </div>                            
-                        </div>
-                        <!--Movie item search box-->
-                        <div class="field has-addons color">
-                            <div class="control is-expanded has-icons-left">
-                                <input class="input is-fullwidth" type="text" placeholder="Search by Movie genre" id="movie-input">
-                                <!--icon for movie item-->
-                                <span class="icon is-small is-left">
-                                    <i class="fas fa-film"></i>
-                                </span>
-                            </div>    
-                        </div>
-                        <div class="control">
-                            <button type="submit" class="button is-primary button is-danger is-light" id="search-btn">Search</button>
-                        </div>
+            </div>
+        </div>
+        <!-- bottom container -->
+        <div class="columns is-mobile block level">
+            <div class="column">
+                <!-- recipe results -->
+                <div class="block box" id="recipe-container">
+                    <h3 class="title is-3">Recipe</h3>
+                    <figure class="image is-16by9">
+                        <img src="./assets/img/chopsticks.jpg">
+                    </figure>                                            
+                </div>
+            </div>
+            <!--column added to give extra space between recipe and movie-->
+            <div class="column"></div>
+            <div class="column">
+                <!-- recipe results -->
+                <div class="block box " id="movie-container">
+                    <h3  id="movie-title" class="title is-3">Movie</h3>
+                    <figure class="has-text-centered" id="poster-container">
+                        <img src="./assets/img/movieplaceholder.jpg">
+                    </figure>
+                    <p id="movie-description"></p>                                        
+                </div>
+            </div>
+            <!--THIS IS THE GOOD ONE-->
+            
+        </div>
+        
+        <!--Footer with attributions-->        
+        <footer class="card-footer has-text-left has-text-centered-mobile is-small has-text-white has-text-weight-bold  ">
+            <div class = "container">
+                <div class="content">
+                    <div class="card-footer-item">
+                    <!--Edamam attribution-->
+                        <div id="edamam-badge" data-color="white"></div>               
+                    </div>           
+                    <!--The Movie Database attribution-->
+                    <div class="card-footer-item">                
+                        Movie content provided by 
+                        <a href="https://www.themoviedb.org/" target="_blank">&nbsp;The Movie DB
+                            <figure class="image is-32x32 ml-1" style="background-color: #0d253f; display: inline-flex; vertical-align: middle;">
+                                <img src="./assets/img/themoviedb-logo.svg" alt="The Movie Database (TMDb)" width = "130" height="94" />
+                            </figure>
+                        </a>
+                    </div>
+                    <!--contact information-->                
+                    <div class="card-footer-item">
+                        Created by <a href = "https://github.com/hsafiya" target = "_blank">&nbsp; Safiyya Hasanova</a>,&nbsp;
+                        <a href = "https://github.com/chasemcquown" target = "_blank">Chase McQuown</a>, 
+                        <a href = "https://github.com/Bullbotbam" target = "_blank">&nbsp;Donald Bull &nbsp;</a> and &nbsp;
+                        <a href = "https://github.com/RiveraDenisse" target = "_blank">Denisse Rivera</a>,    
                     </div>
                 </div>
             </div>
+        </footer>
 
-        </div>
-        <!-- right container -->
-        <div class="column is-half ">
-            <!-- recipe results -->
-            <div class="block box" id="recipe-container">
-                <h3 class="title is-3">Recipe</h3>
-                <figure class="image is-16by9">
-                    <img src="./assets/img/chopsticks.jpg">
-                  </figure>                                            
-            </div>
-            <!-- movie results -->
-            <div class="block box" id="movie-container">
-                <h3 class="title is-3" id="movie-title">Movie </h3>
-                <p id="poster-container"></p>
-                <p id="movie-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa maiores, corporis nemo dolores nisi dolore. Voluptatibus, nesciunt cumque. Eum dolor, aliquam cupiditate nulla voluptate cumque aliquid fugiat doloremque ipsam. Recusandae.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates vitae omnis beatae, impedit maxime labore incidunt officiis odio voluptatem illo perspiciatis accusantium. Accusamus a atque rerum cum quos omnis illo.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates vitae omnis beatae, impedit maxime labore incidunt officiis odio voluptatem illo perspiciatis accusantium. Accusamus a atque rerum cum quos omnis illo.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates vitae omnis beatae, impedit maxime labore incidunt officiis odio voluptatem illo perspiciatis accusantium. Accusamus a atque rerum cum quos omnis illo.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates vitae omnis beatae, impedit maxime labore incidunt officiis odio voluptatem illo perspiciatis accusantium. Accusamus a atque rerum cum quos omnis illo. </p> </div>
-        </div>
-    </div>
-   
-      <!--Footer with attributions-->
-      <footer class="card-footer has-text-left has-text-centered-mobile is-small has-text-white has-text-weight-bold  ">
-        <div class = "container">
-            <div class="content">
-                <div class="card-footer-item">
-                <!--Edamam attribution-->
-                    <div id="edamam-badge" data-color="white"></div>               
-                </div>           
-                <!--The Movie Database attribution-->
-                <div class="card-footer-item">                
-                    Movie content provided by 
-                    <a href="https://www.themoviedb.org/" target="_blank">&nbsp;The Movie DB
-                        <figure class="image is-32x32 ml-1" style="background-color: #0d253f; display: inline-flex; vertical-align: middle;">
-                            <img src="./assets/img/themoviedb-logo.svg" alt="The Movie Database (TMDb)" width = "130" height="94" />
-                        </figure>
-                    </a>
-                </div>
-                <!--contact information-->                
-                <div class="card-footer-item">
-                    Created by <a href = "https://github.com/hsafiya" target = "_blank">&nbsp; Safiyya Hasanova</a>,&nbsp;
-                    <a href = "https://github.com/chasemcquown" target = "_blank">Chase McQuown</a>, 
-                    <a href = "https://github.com/Bullbotbam" target = "_blank">&nbsp;Donald Bull &nbsp;</a> and &nbsp;
-                    <a href = "https://github.com/RiveraDenisse" target = "_blank">Denisse Rivera</a>,    
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="./assets/script.js"></script>
-</body>
+        <script src="./assets/script.js"></script>
+    </body>
 
 </html>
