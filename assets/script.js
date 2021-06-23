@@ -40,55 +40,59 @@ var fetchLogic = function() {
         return response.json()
     })
     .then(function(data) {
+        
+        // store length of recipe results in variable
+        var numberOfRecipes = data.hits.length;
+
+        // generate a random number to use in selection of data
+        var randomNum = Math.floor(Math.random() * numberOfRecipes);
+
         document.querySelector("#recipe-container").innerHTML = `<div class="card col-3 offset-1" >
-        <img src="${data.hits[0].recipe.image}" class="card-img-top" alt="food">
+        
+        <h3 class="card-title"> <strong>${data.hits[randomNum].recipe.label}</strong></h3>
+        <img src="${data.hits[randomNum].recipe.image}" class="card-img-top" alt="food">
         <div class="card-body">
-          <h4 class="card-title"><strong>${data.hits[0].recipe.label}</strong></h4>
-          <p class="card-text"><strong>Recipe Source: </strong>${data.hits[0].recipe.source}</p>
-          <p class="card-text"><strong>Calories: </strong>${Math.floor(data.hits[0].recipe.calories)}</p>
-          <p class="card-text"><strong>Serving size: </strong>${data.hits[0].recipe.yield}</p>
-          <button type="submit" class="button is-primary button is-danger is-light"> <a href="${data.hits[0].recipe.url}" target="_blank" </a>Get Recipe</button>
-        </div>
+        <ul class="list-group>
+          <li class="card-text">Recipe Source: ${data.hits[randomNum].recipe.source}</li>
+          <li class="card-text">Calories: ${Math.floor(data.hits[randomNum].recipe.calories)}</li>
+          <li class="card-text">Serving size: ${data.hits[randomNum].recipe.yield}</li>
+          <button type="submit" class="button is-primary button is-danger is-light"> <a href="${data.hits[randomNum].recipe.url}" target="_blank" </a>Get Recipe</button>
+          </ul>
+          </div>
       </div>`
         
     })
 
     // store user's movie input in variable
     searchedMovie = movieInput.value.trim();
-    console.log(searchedMovie);
     
     fetch(
         movieUrl + MOVIE_DB_API + "&query=" + searchedMovie
     )
     .then(function(response) {
         return response.json()
+
     })
     .then(function(data) {
+        
+        var numberOfMovies = data.results.length;
 
-        console.log(data);
+        var randomNumTwo = Math.floor(Math.random() * numberOfMovies);
        
-        // var movieTitle = data.results[0].original_title
-        // console.log(movieTitle)
-        // document.querySelector("#movie-title").innerHTML = movieTitle
+        var movieTitle = data.results[randomNumTwo].original_title
+        document.querySelector("#movie-title").innerHTML = movieTitle
         
-        var moviePoster = "https://image.tmdb.org/t/p/w500/" + data.results[0].poster_path
-        console.log(moviePoster)
-
-        document.querySelector("movie-poster").innerHTML = `
-        <div class="col-md-3">
-          <div class="well text-center">
-            <img src="${moviePoster}">
-            <h5>${data.results[0].original_title}</h5>
-            
-            <a onclick="${moviePoster}" class="btn btn-primary" href="#">Movie Details</a>
-          </div>
-        </div>
-        `;
-        
-        var movieDescription = data.results[0].overview
-        console.log(movieDescription)
+        var movieDescription = data.results[randomNumTwo].overview
         document.querySelector("#movie-description").innerHTML = movieDescription 
+
+        var moviePoster = data.results[randomNumTwo].poster_path;
+        document.querySelector("#poster-container").innerHTML = '<img src="https://image.tmdb.org/t/p/w185' + moviePoster + '" />'; 
+        console.log(moviePoster);
+
+        var movieTrailer = movieUrl + data.results[randomNumTwo].id + MOVIE_DB_API + "$append_to_response=videos"
+        console.log(movieTrailer)
         
+        // https://api.themoviedb.org/3/movie/550?api_key=cd59a3a7f869d026c281fb812755e81b&append_to_response=videos
         
     }) 
 

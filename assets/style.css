@@ -20,7 +20,28 @@ body {
     opacity: 0.8;
     color:crimson;
 }
+#search-box {
+  width: 60%;
+}
 
+#recipe-container, #movie-container {
+  margin: 0.8rem;
+  padding: 0.6rem;
+  width: 100%;
+  position: relative;
+  min-height: 40vh;
+  background: #f2d1c4;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  }
+  .block .box .movie-poster {
+      max-width: 550px;
+  }
+  .block .box .movie-poster img {
+      max-width: 100%;
+      margin-bottom: 15px;
+  }
 header h1 {
   animation: popout 5s ease;
   -webkit-animation: popout 1s ease;
