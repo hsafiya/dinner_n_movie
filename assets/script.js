@@ -51,9 +51,10 @@ var fetchLogic = function() {
         <img src="${data.hits[randomNum].recipe.image}" class="card-img-top" alt="food">
         <div class="card-body">
           <h4 class="card-title"> <strong>${data.hits[randomNum].recipe.label}</strong></h4>
-          <p class="card-text">Recipe Source: ${data.hits[randomNum].recipe.source}</p>
-          <p class="card-text">Calories: ${Math.floor(data.hits[randomNum].recipe.calories)}</p>
-          <p class="card-text">Serving size: ${data.hits[randomNum].recipe.yield}</p>
+          <ul class="list-group"
+          <li class="card-text">Recipe Source: ${data.hits[randomNum].recipe.source}</li>
+          <li class="card-text">Calories: ${Math.floor(data.hits[randomNum].recipe.calories)}</li>
+          <li class="card-text">Serving size: ${data.hits[randomNum].recipe.yield}</li>
           <button type="submit" class="button is-primary button is-danger is-light"> <a href="${data.hits[randomNum].recipe.url}" target="_blank" </a>Get Recipe</button>
         </div>
       </div>`
