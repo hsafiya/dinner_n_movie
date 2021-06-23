@@ -69,7 +69,7 @@ var fetchLogic = function() {
     })
     .catch(error => 
         
-        document.querySelector("#message-container").innerHTML = "<article class='message is-warning'><div class='message-header'><p id='warning-header'>Attention!</p><button class='delete' aria-label='delete'></button></div><div class='message-body' id='warning-message'>Please enter a valid recipe search term</div></article>"
+        document.querySelector("#message-container").innerHTML = "<article class='message is-warning'><div class='message-header'><p id='warning-header'>Attention!</p></div><div class='message-body' id='warning-message'>Please enter a valid recipe search term</div></article>"
     
     );
 
