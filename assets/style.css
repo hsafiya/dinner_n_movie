@@ -29,7 +29,9 @@ header h1 {
 a {
   color: inherit;
 }
-
+.is-horizontal-center{
+  justify-content: center;
+}
 footer {
   background-image: url(./img/1365.jpg);
 }
