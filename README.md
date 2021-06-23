@@ -27,8 +27,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="">
-    <img src="" alt="Logo" width="80" height="80">
+  <a href="https://hsafiya.github.io/dinner_n_movie/">
+    <img src="https://github.com/hsafiya/dinner_n_movie/blob/README/assets/img/image2.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Dinner & Movie</h3>
@@ -66,7 +66,6 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
@@ -78,7 +77,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Dinner & Movie][product-screenshot]](https://github.com/hsafiya/dinner_n_movie/blob/develop/assets/img/dinner_n_movie_.png)
+[![Dinner & Movie][product-screenshot]](dinner_n_movie_.png)
 
 * Description: 
 Whether it is love, business or just "a thing" Dinner_n_Movie has you covered with incredible themed dinner ideas offers you  the perfect excuse to spend even more time at home. Not done social distancing? Allow Dinner_n_Movie the chance to provide something tasty to eat and fun to watch. Enjoy the large collection recipes carefully crafted to compliment the many movie offerings any fan will appreciate. Enjoy themed meals from around the world in the company of friends or loved ones. 
@@ -96,7 +95,8 @@ The project is an example of how you can build anything with Vanilla JavaScript 
 
 
 * [JavaScript](https://jquery.com)
-* [Laravel](https://laravel.com)
+* [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
+* [HTML](https://html.spec.whatwg.org/)
 * [Bulma](https://bulma.io/)
 
 
@@ -141,19 +141,6 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 ## Roadmap
 
 See the [open issues](https://github.com/hsafiya/dinner_n_movie/issues) for a list of proposed features (and known issues).  Any suggestions for improvements to our app are appreciated.
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 
 
