@@ -52,7 +52,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Dinner & Movie][product-screenshot]](https://github.com/hsafiya/dinner_n_movie/blob/README/assets/img/dinner_n_movie_.png)
+[![Dinner & Movie][product-demo]](https://www.youtube.com/watch?v=8HzTYVWw1Gs)
 
 * Description: 
 Whether it is love, business or just "a thing" Dinner_n_Movie has you covered with incredible themed dinner ideas offers you  the perfect excuse to spend even more time at home. Not done social distancing? Allow Dinner_n_Movie the chance to provide something tasty to eat and fun to watch. Enjoy the large collection recipes carefully crafted to compliment the many movie offerings any fan will appreciate. Enjoy themed meals from around the world in the company of friends or loved ones. 
