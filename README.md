@@ -3,7 +3,7 @@
 <br />
 <p align="center">
   <a href="https://hsafiya.github.io/dinner_n_movie/">
-    <img src="https://github.com/hsafiya/dinner_n_movie/blob/README/assets/img/image2.png" alt="Logo" width="80" height="80">
+    <img src="https://github.com/hsafiya/dinner_n_movie/blob/README/assets/img/image2.png" alt="Logo" width="80" height="80"> 
   </a>
 
   <h3 align="center">Dinner & Movie</h3>
