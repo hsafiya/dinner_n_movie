@@ -12,6 +12,8 @@
             integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
         <!--attribution to Edamam API-->
         <script src="https://developer.edamam.com/attribution/badge.js"></script>
+        <!--add favicon to title-->
+        <link rel="icon" type="image/png" href="./assets/img/logo.png">
         <title>Dinner-N-Movie</title>
     </head>
 
@@ -30,12 +32,16 @@
                         <div class="card-header-title is-centered">
                             Find Movie and recipe
                         </div>
+                        <div id="message-container">
+                        </div>    
+                        <br>
                         <!--search box title end-->
                         <div class="content color ">
                             <!--Food item search box-->
                             <div class="field has-addons">
                                 <div class="control is-expanded has-icons-left">
                                     <input class="input is-fullwidth" type="text" placeholder="Search by Ingredient" id="recipe-input">
+                                    <p id="recipe-searches"></p>
                                     <!--icon for food item-->
                                     <span class="icon is-small is-left">
                                         <i class="fas fa-utensils"></i>
@@ -46,6 +52,7 @@
                             <div class="field has-addons color">
                                 <div class="control is-expanded has-icons-left">
                                     <input class="input is-fullwidth" type="text" placeholder="Search by Movie genre" id="movie-input">
+                                    <p id="movie-searches"></p>
                                     <!--icon for movie item-->
                                     <span class="icon is-small is-left">
                                         <i class="fas fa-film"></i>
