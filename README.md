@@ -141,3 +141,5 @@ Project Link: [Dinner & Movie App]https://hsafiya.github.io/dinner_n_movie/)
 * [OMDB](https://www.omdbapi.com/)
 * [Zoom Meetings](https://zoom.us/)
 
+
+![Demo](./assets/img/dinner_n_movie_.png
